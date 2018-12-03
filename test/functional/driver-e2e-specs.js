@@ -38,7 +38,7 @@ describe('createSession', function () {
       driver = null;
     });
 
-    it('should start android session focusing on default pkg and act', async function () {
+    it.only('should start android session focusing on default pkg and act', async function () { // eslint-disable-line
       driver = await initDriver(APIDEMOS_CAPS);
       let appPackage = await driver.getCurrentPackage();
       let appActivity = await driver.getCurrentDeviceActivity();
